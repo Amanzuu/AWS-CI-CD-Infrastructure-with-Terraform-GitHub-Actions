@@ -6,32 +6,27 @@
         <img src="https://img.shields.io/badge/Terraform-IaC-623CE4?logo=terraform&logoColor=white">
         <img src="https://img.shields.io/badge/GitHub%20Actions-CI/CD-2088FF?logo=github-actions&logoColor=white">
         <img src="https://img.shields.io/badge/Nginx-Web%20Server-009639?logo=nginx&logoColor=white">
-        <img src="https://img.shields.io/badge/SSM-Secure%20Deployment-232F3E">
+        <img src="https://img.shields.io/badge/AWS%20SSM-Secure%20Deployment-232F3E">
     </div>
 </div>
 
 ---
 
-### 📌 Project Overview
+### Project Overview
 
 *This project demonstrates a real-world DevOps workflow where infrastructure provisioning and application deployment are fully automated using CI/CD pipelines.*
 
 - **Infrastructure as Code:** Provision AWS resources using Terraform  
 - **CI/CD Automation:** Deploy application via GitHub Actions  
-- **Secure Deployment:** Use AWS SSM (no SSH required)  
-- **Load Balancing:** Distribute traffic using ALB  
-- **Auto Scaling:** Handle dynamic traffic with ASG  
+- **Secure Deployment:** Use AWS Systems Manager (SSM) (no SSH required)  
+- **Load Balancing:** Distribute traffic using Application Load Balancer (ALB)  
+- **Auto Scaling:** Handle dynamic traffic with Auto Scaling Group (ASG)  
 - **Dynamic UI:** Displays instance hostname to verify load balancing  
+- **Animated Dashboard:** Modern UI with animations  
 
 ---
 
-### 🏗️ Architecture
-
-User → ALB → Auto Scaling Group → EC2 Instances → Nginx Server
-
----
-
-### ⚙️ Tools and Technologies
+### Tools and Technologies
 
 | Tool / Service | Purpose |
 |------|-------------|
@@ -40,14 +35,14 @@ User → ALB → Auto Scaling Group → EC2 Instances → Nginx Server
 | Auto Scaling Group | Scaling infrastructure |
 | VPC | Networking |
 | IAM | Access control |
-| AWS SSM | Remote command execution |
+| AWS Systems Manager (SSM) | Remote command execution |
 | Terraform | Infrastructure provisioning |
 | GitHub Actions | CI/CD pipeline |
 | Nginx | Web server |
 
 ---
 
-### 🔄 CI/CD Pipeline Workflow
+### Pipeline Workflow
 
 **(1) Code Push**
 
@@ -77,7 +72,7 @@ User → ALB → Auto Scaling Group → EC2 Instances → Nginx Server
 
 ---
 
-### 🚀 Features
+### Features
 
 | Feature | Description |
 |------|-------------|
@@ -91,34 +86,17 @@ User → ALB → Auto Scaling Group → EC2 Instances → Nginx Server
 
 ---
 
-### 📸 Demo
+### Setup on Your Machine
 
-- Open ALB DNS URL  
-- Refresh page to observe different instances  
+#### Prerequisites
 
----
-
-### 🚧 Challenges Faced
-
-- JSON escaping issues in GitHub Actions  
-- Passing correct instance IDs to SSM  
-- Terraform resource conflicts  
-- Fixing UTF-8 encoding issues in HTML  
-- Debugging CI/CD pipeline failures  
+- AWS Account  
+- Terraform installed  
+- Git installed  
+- GitHub repository  
+- IAM credentials configured in GitHub Secrets  
 
 ---
-
-### 🧠 Key Learnings
-
-- Designing real-world CI/CD pipelines  
-- Infrastructure as Code (IaC) best practices  
-- Secure cloud deployments without SSH  
-- Debugging Terraform + AWS integration  
-- Automating deployments at scale  
-
----
-
-### 🛠️ Setup Instructions
 
 #### Clone Repository
 
